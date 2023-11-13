@@ -60,22 +60,71 @@
                 <div class="content">
                     <div class="title-area">
                         <h1 class="title-modern">My Creative Journey</h1>
-                        <h3>Raycle Raynold</h2>
+                        <div id="greeting" class="flip">
+                            <div class="front">Hi</div>
+                            <div class="back">Hello</div>
+                        </div>
+                        <h3>I'm Raycle Raynold</h3>
                         <div class="separator line-separator">♦</div>
                     </div>
-
+    
                     <div class="button-get-started">
                         <a href="https://cogito.unklab.ac.id/index.php/cogito/article/view/500" target="_blank" class="btn btn-white btn-fill btn-lg ">
                             Check out my Publication
                         </a>
                     </div>
                 </div>
-
+    
             </div>
         </div>
     </div>
-
-
+    
+    <style>
+    .flip {
+        perspective: 1000px;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        margin: 0 auto;
+        font-size: 2em; /* Increase font size */
+    }
+    .flip div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 1s;
+    }
+    .front {
+        z-index: 2;
+        transform: rotateX(0deg);
+    }
+    .back {
+        transform: rotateX(180deg);
+    }
+    .flipped .front {
+        transform: rotateX(180deg);
+    }
+    .flipped .back {
+        transform: rotateX(0deg);
+    }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        setInterval(function() {
+            $('#greeting').toggleClass('flipped');
+        }, 2000); // Flip every 2 seconds
+    });
+    </script>
+    
+    
+    
+    
+    
+    
+    
     <div class="section">
         <div class="container">
             <div class="row">
@@ -92,7 +141,7 @@
                             <i class="fab fa-instagram"></i>
                         </div>
                         <h3>Instagram</h3>
-                        <p class="description">@raycle_.</p>
+                        <p class="description">@raycle_</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -110,7 +159,7 @@
                             <i class="fab fa-linkedin"></i>
                         </div>
                         <h3>LinkedIn</h3>
-                        <p class="description">raycle</p>
+                        <p class="description">Raycle</p>
                     </div>
                 </div>
             </div>
